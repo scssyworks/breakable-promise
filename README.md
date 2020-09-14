@@ -1,3 +1,5 @@
+# THIS PROJECT IS CURRENTLY UNDER DEVELOPMENT
+
 # Breakable Promise
 
 A "Promise" implementation that can be broken.

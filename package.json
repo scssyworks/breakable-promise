@@ -1,0 +1,54 @@
+{
+  "name": "breakable-promise",
+  "version": "0.1.0",
+  "description": "Project breakable-promise",
+  "main": "dist/umd/breakablePromise.js",
+  "module": "dist/esm/breakablePromise.esm.js",
+  "types": "dist/typings/src/index.d.ts",
+  "scripts": {
+    "start": "rollup -c --watch --environment SERVE:true",
+    "build": "npm run typegen && rollup -c",
+    "test": "jest plugin.test.ts --coverage",
+    "typegen": "tsc --declaration --noEmit false --outDir dist/typings/ --emitDeclarationOnly --declarationMap"
+  },
+  "author": "scssyworks",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-private-methods": "^7.10.4",
+    "@babel/plugin-transform-async-to-generator": "^7.10.4",
+    "@babel/plugin-transform-regenerator": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^6.1.0",
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "babel-eslint": "^10.1.0",
+    "jest": "^26.2.2",
+    "rollup": "^2.26.10",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-serve": "^1.0.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^3.9.7"
+  },
+  "keywords": [
+    "promise",
+    "breakable",
+    "break",
+    "abort"
+  ],
+  "files": [
+    "dist/umd/",
+    "dist/esm/",
+    "dist/typings/"
+  ],
+  "dependencies": {
+    "is-promise": "^4.0.0"
+  }
+}
